@@ -1,5 +1,5 @@
 # Dataset
-Download the Kaggle dataset and extract it into `data/raw/`.
+Download the Kaggle dataset "amerzishminha/forest-fire-smoke-and-non-fire-image-dataset" and extract it into `data/raw/`.
 
 Expected structure:
 data/raw/
