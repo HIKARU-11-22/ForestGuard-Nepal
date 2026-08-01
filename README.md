@@ -550,25 +550,108 @@ Predict Single Image
 
 ---
 
-# 20. Member 4 — Evaluation Responsibilities
+# 20. Team Member Contributions
 
-For the group project, the evaluation work includes:
+The project responsibilities are divided among four group members according to the project plan.
 
-- evaluating the trained model;
-- reporting Accuracy;
-- reporting Precision;
-- reporting Recall;
-- reporting F1-score;
-- generating classification reports;
-- generating confusion matrices;
-- generating normalized confusion matrices;
-- analysing errors by class;
-- identifying common confusion pairs;
-- visualising incorrect predictions;
-- writing the experiments and results section;
-- documenting ethical and social considerations.
+## Prasiddhi — Dataset & Introduction
 
-The evaluation notebook should be run using the trained model and unseen test data.
+### Report Sections
+- Executive Summary
+- Introduction & Nepal Context
+- Conclusion
+
+### Coding Responsibilities
+- Download the dataset
+- Data cleaning
+- Data preprocessing
+- Train/validation/test split
+- Data augmentation
+- Dataset visualisation (EDA)
+
+### Main Contribution
+Prasiddhi(Team Lead) is responsible for preparing and documenting the dataset and establishing the project context, including the Nepal-specific motivation and background.
+
+---
+
+## Rujal — Model 1 / Baseline CNN/MLP
+
+### Report Sections
+- Literature Review
+- Data
+  - Dataset description
+  - Preprocessing
+  - Augmentation
+
+### Coding Responsibilities
+- Build and train **Model 1 (baseline CNN/MLP)**
+- Hyperparameter tuning
+- Save training and validation accuracy/loss graphs
+
+### Main Contribution
+Rujal is responsible for the baseline model and the literature and dataset-related report sections.
+
+---
+
+## Amrit — Model 2 / Transfer Learning or Advanced CNN
+
+### Report Sections
+- Methodology
+  - Architecture
+  - Training process
+  - Hyperparameters
+- Deployment Considerations
+
+### Coding Responsibilities
+- Build and train **Model 2 (Transfer Learning/advanced CNN)**
+- Apply optimisation techniques such as:
+  - Dropout
+  - Early Stopping
+  - Batch Normalization
+  - Other applicable optimisation techniques
+- Compare Model 1 versus Model 2
+
+### Main Contribution
+Amrit is responsible for the advanced model, training methodology, optimisation techniques and model-level comparison.
+
+---
+
+## Roshan — Evaluation, Ethics & Final Integration
+
+### Report Sections
+- Experiments & Results
+- Ethical/Social/Environmental Impact
+- Team Reflection
+- References & Appendices
+
+### Coding Responsibilities
+- Evaluate both models using:
+  - Accuracy
+  - Precision
+  - Recall
+  - F1-score
+  - Confusion Matrix
+- Perform error analysis
+- Create the Streamlit/Gradio/Jupyter demonstration, where applicable
+- Organise the GitHub repository
+- Maintain/update the README
+- Perform final code integration
+
+### Main Contribution
+Roshan is responsible for the final experimental evaluation and interpretation of both models. This includes comparing model performance, analysing incorrect predictions, preparing confusion matrices and documenting the ethical, social and environmental implications of the project.
+
+Roshan also coordinates the final repository organisation and integrates the group's completed work into the final project structure.
+
+---
+
+## Contribution Summary
+
+| Member | Main Area | Key Deliverables |
+|---|---|---|
+| **Prasiddhi** | Dataset & Project Context | Dataset preparation, preprocessing, train/validation/test split, augmentation, EDA, Executive Summary, Introduction & Nepal Context, Conclusion |
+| **Rujal** | Model 1 / Baseline | Baseline CNN/MLP, hyperparameter tuning, training/validation graphs, Literature Review, Data section |
+| **Amrit** | Model 2 / Advanced Model | Transfer Learning/advanced CNN, optimisation techniques, model comparison, Methodology, Deployment Considerations |
+| **Roshan** | Evaluation & Final Integration | Accuracy, Precision, Recall, F1, confusion matrices, error analysis, ethics/social/environmental impact, reflection, references, demo, README, GitHub organisation, final integration |
 
 ---
 
