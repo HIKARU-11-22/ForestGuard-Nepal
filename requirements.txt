@@ -1,8 +1,26 @@
-tensorflow>=2.16
-streamlit>=1.35
-scikit-learn>=1.4
-pandas>=2.0
-numpy>=1.26
-matplotlib>=3.8
-seaborn>=0.13
-Pillow>=10.0
+# ForestGuard Nepal - Forest Fire / Smoke / Non-Fire Detection
+# Python 3.11 recommended
+
+# Deep Learning
+tensorflow==2.16.1
+numpy==1.26.4
+
+# Data handling
+pandas==2.2.3
+
+# Image processing
+Pillow==11.0.0
+
+# Machine learning evaluation
+scikit-learn==1.5.2
+
+# Visualisation
+matplotlib==3.9.2
+seaborn==0.13.2
+
+# demo
+gradio
+
+# Jupyter / Notebook support
+jupyter==1.1.1
+ipykernel==6.29.5
