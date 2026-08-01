@@ -13,7 +13,7 @@ The project compares a custom CNN with MobileNetV2 transfer learning and provide
 ## Setup
 
 ```bash
-git clone (https://github.com/HIKARU-11-22/ForestGuard-Nepal.git)
+git clone https://github.com/HIKARU-11-22/ForestGuard-Nepal.git
 cd ForestGuard-Nepal
 python -m venv .venv
 ```
