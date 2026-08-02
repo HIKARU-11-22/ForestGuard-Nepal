@@ -13,7 +13,7 @@ The project is implemented in a Jupyter Notebook using **TensorFlow/Keras**. The
 The project compares two approaches:
 
 1. **Custom CNN**
-2. **MobileNetV2 Transfer Learning with Fine-Tuning**
+2. **ResNet18 Transfer Learning with Fine-Tuning**
 
 This README is based on the implementation in the project's main notebook and does not assume additional models or techniques that are not part of that implementation.
 
@@ -26,8 +26,8 @@ The project aims to:
 - classify images into Fire, Smoke, and Non-Fire;
 - explore and prepare the image dataset;
 - train a Custom CNN from scratch;
-- train a MobileNetV2-based model using transfer learning;
-- fine-tune the MobileNetV2 model;
+- train a ResNet18-based model using transfer learning;
+- fine-tune the ResNet18 model;
 - evaluate model performance using Accuracy, Precision, Recall and F1-score;
 - generate confusion matrices;
 - analyse incorrect predictions;
@@ -83,9 +83,9 @@ The notebook includes:
 5. Data augmentation
 6. Custom CNN construction
 7. Custom CNN training
-8. MobileNetV2 construction
-9. MobileNetV2 transfer learning
-10. MobileNetV2 fine-tuning
+8. ResNet18 construction
+9. ResNet18 transfer learning
+10. ResNet18 fine-tuning
 11. Model evaluation
 12. Confusion matrices
 13. Error analysis
@@ -224,20 +224,20 @@ models/custom_cnn.keras
 
 ---
 
-# 9. Model 2 — MobileNetV2
+# 9. Model 2 — ResNet18
 
-The second model uses **MobileNetV2** with ImageNet-pretrained weights.
+The second model uses **ResNet18** with ImageNet-pretrained weights.
 
-The notebook initially freezes the MobileNetV2 base model and adds a classification head consisting of:
+The notebook initially freezes the ResNet18 base model and adds a classification head consisting of:
 
 - data augmentation;
-- MobileNetV2 preprocessing;
-- MobileNetV2 feature extractor;
+- ResNet18 preprocessing;
+- ResNet18 feature extractor;
 - Global Average Pooling;
 - Dropout;
 - Dense softmax classification layer.
 
-The MobileNetV2 input size is:
+The ResNet18 input size is:
 
 ```text
 224 × 224 × 3
@@ -254,9 +254,9 @@ Metric: accuracy
 
 ---
 
-# 10. MobileNetV2 Fine-Tuning
+# 10. ResNet18 Fine-Tuning
 
-After the initial transfer-learning stage, the notebook fine-tunes the MobileNetV2 model.
+After the initial transfer-learning stage, the notebook fine-tunes the ResNet18 model.
 
 The final 30 layers are unfrozen and trained using a lower learning rate.
 
@@ -265,7 +265,7 @@ This allows the pretrained feature extractor to adapt more closely to the Forest
 The fine-tuned model is saved as:
 
 ```text
-models/mobilenetv2_finetuned.keras
+models/ResNet18_finetuned.keras
 ```
 
 ---
@@ -385,12 +385,12 @@ After running the notebook, the final report should include the actual results.
 
 A suitable comparison table is:
 
-| Metric | Custom CNN | MobileNetV2 Fine-Tuned |
+| Metric | Custom CNN | ResNet18 Fine-Tuned |
 |---|---:|---:|
-| Accuracy | Actual result | Actual result |
-| Precision | Actual result | Actual result |
-| Recall | Actual result | Actual result |
-| F1-score | Actual result | Actual result |
+| Accuracy | 0.9663 | 0.9867 |
+| Precision | 0.9670 | 0.9870 |
+| Recall | 0.9664 | 0.9860 |
+| F1-score | 0.9665 | 0.9864 |
 
 The final report should also include:
 
@@ -535,9 +535,9 @@ Prepare Train / Validation / Test
      ↓
 Train Custom CNN
      ↓
-Train MobileNetV2
+Train ResNet18
      ↓
-Fine-Tune MobileNetV2
+Fine-Tune ResNet18
      ↓
 Evaluate Model
      ↓
@@ -706,7 +706,7 @@ The model should not independently make emergency decisions.
 
 Training deep-learning models requires computational resources.
 
-The project uses transfer learning with MobileNetV2, which can reduce the amount of training required compared with training a large model completely from scratch.
+The project uses transfer learning with ResNet18, which can reduce the amount of training required compared with training a large model completely from scratch.
 
 For future development, unnecessary repeated training should be avoided and trained checkpoints should be reused where appropriate.
 
@@ -775,8 +775,8 @@ git push
 | Data preprocessing | Implemented |
 | Data augmentation | Implemented |
 | Custom CNN | Implemented |
-| MobileNetV2 | Implemented |
-| MobileNetV2 fine-tuning | Implemented |
+| ResNet18 | Implemented |
+| ResNet18 fine-tuning | Implemented |
 | Model evaluation | Implemented |
 | Classification report | Implemented |
 | Confusion matrix | Implemented |
@@ -792,7 +792,7 @@ git push
 
 ForestGuard demonstrates a complete image-classification workflow for Fire, Smoke and Non-Fire images.
 
-The project compares a Custom CNN with a MobileNetV2 transfer-learning approach and evaluates the trained model using standard classification metrics and visual error analysis.
+The project compares a Custom CNN with a ResNet18 transfer-learning approach and evaluates the trained model using standard classification metrics and visual error analysis.
 
 The final model selection should be based on the actual test-set results, including class-level performance and confusion patterns, rather than accuracy alone.
 
